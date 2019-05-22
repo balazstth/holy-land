@@ -31,7 +31,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="2">
+    <Units Count="3">
       <Unit0>
         <Filename Value="HolyLand.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -40,9 +40,15 @@
         <Filename Value="mainunit.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainUnit"/>
       </Unit1>
+      <Unit2>
+        <Filename Value="appunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="AppUnit"/>
+      </Unit2>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

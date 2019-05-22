@@ -1,21 +1,29 @@
 object MainForm: TMainForm
-  Left = 350
-  Height = 768
-  Top = 110
-  Width = 1024
+  Left = 548
+  Height = 600
+  Top = 225
+  Width = 800
   Caption = 'HolyLand'
-  DesignTimePPI = 120
   Menu = MainMenu
   OnCreate = FormCreate
   LCLVersion = '2.0.2.0'
   object MainMenu: TMainMenu
-    left = 24
-    top = 16
+    left = 19
+    top = 13
     object MenuItemFile: TMenuItem
       Caption = 'File'
       object MenuItemExit: TMenuItem
         Caption = 'Exit'
+        ShortCut = 32856
         OnClick = MenuItemExitClick
+      end
+    end
+    object MenuItemOptions: TMenuItem
+      Caption = 'Options'
+      object MenuItemToggleFullscreen: TMenuItem
+        Caption = 'Toggle Fullscreen'
+        ShortCut = 32781
+        OnClick = MenuItemToggleFullscreenClick
       end
     end
     object MenuItemHelp: TMenuItem
@@ -23,6 +31,7 @@ object MainForm: TMainForm
       OnClick = MenuItemHelpClick
       object MenuItemAbout: TMenuItem
         Caption = 'About'
+        ShortCut = 112
         OnClick = MenuItemAboutClick
       end
     end
