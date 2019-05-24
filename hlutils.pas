@@ -22,6 +22,12 @@ function ScaleFormValue(Form: TForm; Value: Longint): Longint;
 var
   Factor: Real;
 begin
+  if Form.PixelsPerInch = Screen.PixelsPerInch then
+  begin
+    Result := Value;
+    Exit;
+  end;
+
   Factor := Form.PixelsPerInch / Screen.PixelsPerInch;
   Result := Round(Value * Factor);
 end;
@@ -30,6 +36,12 @@ function ScaleFormValue(Form: TForm; Value: Real): Longint;
 var
   Factor: Real;
 begin
+  if Form.PixelsPerInch = Screen.PixelsPerInch then
+  begin
+    Result := Round(Value);
+    Exit;
+  end;
+
   Factor := Form.PixelsPerInch / Screen.PixelsPerInch;
   Result := Round(Value * Factor);
 end;
