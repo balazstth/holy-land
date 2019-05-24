@@ -22,7 +22,7 @@ object MainForm: TMainForm
       Caption = 'Options'
       object MenuItemToggleFullscreen: TMenuItem
         Caption = 'Toggle Fullscreen'
-        ShortCut = 32781
+        ShortCut = 32838
         OnClick = MenuItemToggleFullscreenClick
       end
     end

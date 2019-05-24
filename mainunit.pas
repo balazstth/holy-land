@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus,
-  AppUnit;
+  AppUnit, HLUtils;
 
 type
 
@@ -42,19 +42,11 @@ implementation
 { TMainForm }
 
 procedure TMainForm.FormCreate(Sender: TObject);
-var
-  Screen: TScreen;
 begin
-  Screen := TScreen.Create(nil);
-  try
-    Width   := Screen.Width  * 8 div 10;
-    Height  := Screen.Height * 8 div 10;
-    Left    := Screen.Width  div 10;
-    Top     := Screen.Height div 10;
-    Visible := True;
-  finally
-    FreeAndNil(Screen);
-  end;
+  Width  := ScaleFormValue(Self, Screen.Width  * 0.8);
+  Height := ScaleFormValue(Self, Screen.Height * 0.8);
+  Left   := ScaleFormValue(Self, Screen.Width  * 0.1);
+  Top    := ScaleFormValue(Self, Screen.Height * 0.1);
 end;
 
 procedure TMainForm.MenuItemOptionsClick(Sender: TObject);
@@ -67,12 +59,10 @@ begin
   if WindowState <> wsMaximized then
   begin
     WindowState := wsMaximized;
-    // TMainForm.MenuItemFullscreen.Caption = 'Normal window';
   end
   else
   begin
     WindowState := wsNormal;
-    // TMainForm.MenuItemFullscreen.Caption = 'Fullscreen window';
   end;
 end;
 

@@ -1,3 +1,9 @@
+{─────────────────────────────────────────────────────────────────────
+  Holy Land - A Pascal Project
+  Copyright (c) 2019 Tóth Balázs Aladár
+  No warranty.
+─────────────────────────────────────────────────────────────────────}
+
 program HolyLand;
 
 {$mode objfpc}{$H+}
