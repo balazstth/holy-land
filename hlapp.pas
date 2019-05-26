@@ -10,7 +10,6 @@ uses
 type
   TApp = class
     public const version: String = 'Pre-1.0.0 ' + {$I %DATE%} + ' ' + {$I %TIME%};
-    constructor Create;
   end;
 
 var
@@ -18,10 +17,9 @@ var
 
 implementation
 
-constructor TApp.Create;
-begin
+{------------------------------------------------------------------------------}
 
-end;
+{ Lifecycle management }
 
 initialization
 begin

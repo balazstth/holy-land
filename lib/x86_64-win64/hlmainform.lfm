@@ -6,7 +6,7 @@ object MainForm: TMainForm
   Caption = 'HolyLand'
   Menu = MainMenu
   OnCreate = FormCreate
-  LCLVersion = '2.0.2.0'
+  SessionProperties = 'Height;Left;Top;Width;WindowState'
   object MainMenu: TMainMenu
     left = 19
     top = 13
@@ -18,8 +18,20 @@ object MainForm: TMainForm
         OnClick = MenuItemExitClick
       end
     end
+    object MenuItemGames: TMenuItem
+      Caption = 'Games'
+      object MenuItemTetris: TMenuItem
+        Caption = 'Tetris'
+        OnClick = MenuItemTetrisClick
+      end
+    end
     object MenuItemOptions: TMenuItem
       Caption = 'Options'
+      object MenuItemWindowDefaults: TMenuItem
+        Caption = 'Window Defaults'
+        ShortCut = 32836
+        OnClick = MenuItemWindowDefaultsClick
+      end
       object MenuItemToggleFullscreen: TMenuItem
         Caption = 'Toggle Fullscreen'
         ShortCut = 32838
@@ -28,12 +40,17 @@ object MainForm: TMainForm
     end
     object MenuItemHelp: TMenuItem
       Caption = 'Help'
-      OnClick = MenuItemHelpClick
       object MenuItemAbout: TMenuItem
         Caption = 'About'
         ShortCut = 112
         OnClick = MenuItemAboutClick
       end
     end
+  end
+  object SessionIniPropStorage: TIniPropStorage
+    StoredValues = <>
+    IniFileName = 'HolyLand.ini'
+    left = 48
+    top = 13
   end
 end

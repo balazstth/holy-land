@@ -13,11 +13,20 @@ interface
 uses
   Classes, SysUtils, Forms;
 
+{ Utility functions }
+
 function ScaleFormValue(Form: TForm; Value: Longint): Longint;
 function ScaleFormValue(Form: TForm; Value: Real): Longint;
 
 implementation
 
+{------------------------------------------------------------------------------}
+
+{ Utility functions }
+
+{
+Scale pixel value according to desktop DPI
+}
 function ScaleFormValue(Form: TForm; Value: Longint): Longint;
 var
   Factor: Real;
@@ -32,6 +41,9 @@ begin
   Result := Round(Value * Factor);
 end;
 
+{
+Scale pixel value according to desktop DPI
+}
 function ScaleFormValue(Form: TForm; Value: Real): Longint;
 var
   Factor: Real;

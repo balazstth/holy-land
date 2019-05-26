@@ -5,7 +5,7 @@ unit HLMainForm;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus,
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus, IniPropStorage,
   HLApp, HLUtils;
 
 type
@@ -13,21 +13,25 @@ type
   { TMainForm }
 
   TMainForm = class(TForm)
+    SessionIniPropStorage: TIniPropStorage;
     MainMenu: TMainMenu;
-    MenuItemToggleFullscreen: TMenuItem;
-    MenuItemOptions: TMenuItem;
     MenuItemFile: TMenuItem;
+    MenuItemExit: TMenuItem;
+    MenuItemGames: TMenuItem;
+    MenuItemTetris: TMenuItem;
+    MenuItemOptions: TMenuItem;
+    MenuItemWindowDefaults: TMenuItem;
+    MenuItemToggleFullscreen: TMenuItem;
     MenuItemHelp: TMenuItem;
     MenuItemAbout: TMenuItem;
-    MenuItemExit: TMenuItem;
     procedure FormCreate(Sender: TObject);
-    procedure MenuItemOptionsClick(Sender: TObject);
-    procedure MenuItemToggleFullscreenClick(Sender: TObject);
-    procedure MenuItemHelpClick(Sender: TObject);
-    procedure MenuItemAboutClick(Sender: TObject);
     procedure MenuItemExitClick(Sender: TObject);
+    procedure MenuItemTetrisClick(Sender: TObject);
+    procedure MenuItemWindowDefaultsClick(Sender: TObject);
+    procedure MenuItemToggleFullscreenClick(Sender: TObject);
+    procedure MenuItemAboutClick(Sender: TObject);
   private
-
+    procedure SetDefaults(Sender: TObject);
   public
 
   end;
@@ -41,17 +45,39 @@ implementation
 
 { TMainForm }
 
+{------------------------------------------------------------------------------}
+
+{ Init }
+
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
-  Width  := ScaleFormValue(Self, Screen.Width  * 0.8);
-  Height := ScaleFormValue(Self, Screen.Height * 0.8);
-  Left   := ScaleFormValue(Self, Screen.Width  * 0.1);
-  Top    := ScaleFormValue(Self, Screen.Height * 0.1);
+  SetDefaults(Sender);
 end;
 
-procedure TMainForm.MenuItemOptionsClick(Sender: TObject);
-begin
+{------------------------------------------------------------------------------}
 
+{ Menu item handlers }
+
+{ File }
+
+procedure TMainForm.MenuItemExitClick(Sender: TObject);
+begin
+  Close;
+end;
+
+{ Games }
+
+procedure TMainForm.MenuItemTetrisClick(Sender: TObject);
+begin
+  ShowMessage('Tetris coming up.');
+  // TODO
+end;
+
+{ Options }
+
+procedure TMainForm.MenuItemWindowDefaultsClick(Sender: TObject);
+begin
+  SetDefaults(Sender);
 end;
 
 procedure TMainForm.MenuItemToggleFullscreenClick(Sender: TObject);
@@ -62,10 +88,7 @@ begin
     WindowState := wsNormal;
 end;
 
-procedure TMainForm.MenuItemHelpClick(Sender: TObject);
-begin
-
-end;
+{ Help }
 
 procedure TMainForm.MenuItemAboutClick(Sender: TObject);
 begin
@@ -76,9 +99,18 @@ begin
     + 'No warranty.');
 end;
 
-procedure TMainForm.MenuItemExitClick(Sender: TObject);
+{------------------------------------------------------------------------------}
+
+{ Private }
+
+procedure TMainForm.SetDefaults(Sender: TObject);
 begin
-  Close;
+  // Default window properties
+  WindowState := wsNormal;
+  Width  := ScaleFormValue(Self, Screen.WorkAreaWidth  * 0.8);
+  Height := ScaleFormValue(Self, Screen.WorkAreaHeight * 0.8);
+  Left   := ScaleFormValue(Self, Screen.WorkAreaWidth  * 0.1);
+  Top    := ScaleFormValue(Self, Screen.WorkAreaHeight * 0.1);
 end;
 
 end.
