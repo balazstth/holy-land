@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Menus, IniPropStorage,
-  HLApp, HLUtils;
+  HLApp, HLUtils, HLNotepad;
 
 type
 
@@ -15,6 +15,14 @@ type
   TMainForm = class(TForm)
     SessionIniPropStorage: TIniPropStorage;
     MainMenu: TMainMenu;
+    MenuItem1: TMenuItem;
+    MenuItemSineScroller: TMenuItem;
+    MenuItemLandscape: TMenuItem;
+    MenuItem3DCube: TMenuItem;
+    MenuItemSpaceInvaders: TMenuItem;
+    MenuItem2048: TMenuItem;
+    MenuItemNotepad: TMenuItem;
+    MenuItemUtilities: TMenuItem;
     MenuItemFile: TMenuItem;
     MenuItemExit: TMenuItem;
     MenuItemGames: TMenuItem;
@@ -25,7 +33,13 @@ type
     MenuItemHelp: TMenuItem;
     MenuItemAbout: TMenuItem;
     procedure FormCreate(Sender: TObject);
+    procedure MenuItem2048Click(Sender: TObject);
+    procedure MenuItem3DCubeClick(Sender: TObject);
     procedure MenuItemExitClick(Sender: TObject);
+    procedure MenuItemLandscapeClick(Sender: TObject);
+    procedure MenuItemNotepadClick(Sender: TObject);
+    procedure MenuItemSineScrollerClick(Sender: TObject);
+    procedure MenuItemSpaceInvadersClick(Sender: TObject);
     procedure MenuItemTetrisClick(Sender: TObject);
     procedure MenuItemWindowDefaultsClick(Sender: TObject);
     procedure MenuItemToggleFullscreenClick(Sender: TObject);
@@ -51,6 +65,7 @@ implementation
 
 procedure TMainForm.FormCreate(Sender: TObject);
 begin
+  inherited;
   SetDefaults(Sender);
 end;
 
@@ -65,12 +80,43 @@ begin
   Close;
 end;
 
+{ Utilities }
+
+procedure TMainForm.MenuItemNotepadClick(Sender: TObject);
+begin
+  Notepad.Show;
+end;
+
 { Games }
+
+procedure TMainForm.MenuItem2048Click(Sender: TObject);
+begin
+
+end;
+
+procedure TMainForm.MenuItemSpaceInvadersClick(Sender: TObject);
+begin
+
+end;
 
 procedure TMainForm.MenuItemTetrisClick(Sender: TObject);
 begin
-  ShowMessage('Tetris coming up.');
-  // TODO
+
+end;
+
+procedure TMainForm.MenuItem3DCubeClick(Sender: TObject);
+begin
+
+end;
+
+procedure TMainForm.MenuItemLandscapeClick(Sender: TObject);
+begin
+
+end;
+
+procedure TMainForm.MenuItemSineScrollerClick(Sender: TObject);
+begin
+
 end;
 
 { Options }
@@ -78,6 +124,7 @@ end;
 procedure TMainForm.MenuItemWindowDefaultsClick(Sender: TObject);
 begin
   SetDefaults(Sender);
+  Notepad.SetDefaults(Sender);
 end;
 
 procedure TMainForm.MenuItemToggleFullscreenClick(Sender: TObject);
@@ -92,7 +139,14 @@ end;
 
 procedure TMainForm.MenuItemAboutClick(Sender: TObject);
 begin
-  ShowMessage('Welcome to the Holy Land again,' + sLineBreak
+  ShowMessage(
+      ' ░░░░░░░░' + sLineBreak
+    + ' ░▓░▓░▓░░' + sLineBreak
+    + ' ░▓▓▓░▓░░' + sLineBreak
+    + ' ░▓░▓░▓▓░' + sLineBreak
+    + ' ░░░░░░░░' + sLineBreak
+    + sLineBreak
+    + 'Welcome to the Holy Land again,' + sLineBreak
     + 'after so many years.' + sLineBreak  + sLineBreak
     + 'Version ' + App.version + sLineBreak + sLineBreak
     + 'Copyright © 2019 Aladar International' + sLineBreak

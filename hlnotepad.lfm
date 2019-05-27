@@ -1,0 +1,14 @@
+object Notepad: TNotepad
+  Left = 352
+  Height = 384
+  Top = 32
+  Width = 512
+  Caption = 'HolyLand - Notepad'
+  SessionProperties = 'DesignTimePPI;Height;Left;Top;Width;WindowState'
+  object SessionIniPropStorage: TIniPropStorage
+    StoredValues = <>
+    IniFileName = 'HolyLand.ini'
+    left = 8
+    top = 8
+  end
+end
