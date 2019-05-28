@@ -14,6 +14,7 @@ type
 
   TNotepad = class(TForm)
     SessionIniPropStorage: TIniPropStorage;
+    procedure FormCreate(Sender: TObject);
     procedure SetDefaults(Sender: TObject);
   private
 
@@ -27,6 +28,16 @@ var
 implementation
 
 {$R *.lfm}
+
+{------------------------------------------------------------------------------}
+
+{ Init }
+
+procedure TNotepad.FormCreate(Sender: TObject);
+begin
+  inherited;
+  SetDefaults(Sender);
+end;
 
 procedure TNotepad.SetDefaults(Sender: TObject);
 begin

@@ -5,6 +5,7 @@ object Notepad: TNotepad
   Width = 640
   Caption = 'HolyLand - Notepad'
   DesignTimePPI = 120
+  OnCreate = FormCreate
   SessionProperties = 'Height;Left;Top;Width;WindowState'
   object SessionIniPropStorage: TIniPropStorage
     StoredValues = <>

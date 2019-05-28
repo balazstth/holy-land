@@ -19,9 +19,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="HLMainForm"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <CursorPos Y="171"/>
+        <TopLine Value="59"/>
+        <CursorPos X="13" Y="63"/>
         <UsageCount Value="208"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -32,12 +32,11 @@
         <UnitName Value="HLApp"/>
         <EditorIndex Value="3"/>
         <CursorPos X="4" Y="35"/>
-        <UsageCount Value="199"/>
+        <UsageCount Value="204"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="uscaledpi.pas"/>
-        <IsPartOfProject Value="True"/>
         <UnitName Value="UScaleDPI"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="26" Y="31"/>
@@ -49,12 +48,11 @@
         <UnitName Value="HLUtils"/>
         <EditorIndex Value="4"/>
         <CursorPos Y="62"/>
-        <UsageCount Value="159"/>
+        <UsageCount Value="164"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="hlform.pas"/>
-        <IsPartOfProject Value="True"/>
         <UnitName Value="HLForm"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="14"/>
@@ -68,15 +66,16 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="HLNotepad"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <CursorPos Y="29"/>
-        <UsageCount Value="38"/>
+        <TopLine Value="17"/>
+        <CursorPos X="3" Y="38"/>
+        <UsageCount Value="43"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit6>
       <Unit7>
         <Filename Value="hlabout.pas"/>
-        <IsPartOfProject Value="True"/>
         <ComponentName Value="About"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
@@ -131,7 +130,7 @@
         <UsageCount Value="10"/>
       </Unit13>
     </Units>
-    <JumpHistory Count="27" HistoryIndex="26">
+    <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
         <Filename Value="hlmainform.pas"/>
       </Position1>
@@ -239,6 +238,14 @@
         <Filename Value="hlmainform.pas"/>
         <Caret Line="146" Column="33" TopLine="117"/>
       </Position27>
+      <Position28>
+        <Filename Value="hlnotepad.pas"/>
+        <Caret Line="16" TopLine="12"/>
+      </Position28>
+      <Position29>
+        <Filename Value="hlnotepad.pas"/>
+        <Caret Line="17" Column="15" TopLine="17"/>
+      </Position29>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

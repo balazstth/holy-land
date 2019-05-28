@@ -107,7 +107,7 @@
         <PackageName Value="LCL"/>
       </Item3>
     </RequiredPackages>
-    <Units Count="8">
+    <Units Count="5">
       <Unit0>
         <Filename Value="HolyLand.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -126,36 +126,18 @@
         <UnitName Value="HLApp"/>
       </Unit2>
       <Unit3>
-        <Filename Value="uscaledpi.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="UScaleDPI"/>
-      </Unit3>
-      <Unit4>
         <Filename Value="hlutils.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="HLUtils"/>
-      </Unit4>
-      <Unit5>
-        <Filename Value="hlform.pas"/>
-        <IsPartOfProject Value="True"/>
-        <UnitName Value="HLForm"/>
-      </Unit5>
-      <Unit6>
+      </Unit3>
+      <Unit4>
         <Filename Value="hlnotepad.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Notepad"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="HLNotepad"/>
-      </Unit6>
-      <Unit7>
-        <Filename Value="hlabout.pas"/>
-        <IsPartOfProject Value="True"/>
-        <ComponentName Value="About"/>
-        <HasResources Value="True"/>
-        <ResourceBaseClass Value="Form"/>
-        <UnitName Value="HLAbout"/>
-      </Unit7>
+      </Unit4>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
