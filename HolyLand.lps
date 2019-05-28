@@ -8,7 +8,7 @@
       <Unit0>
         <Filename Value="HolyLand.lpr"/>
         <IsPartOfProject Value="True"/>
-        <CursorPos X="14" Y="29"/>
+        <CursorPos X="4" Y="29"/>
         <UsageCount Value="208"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -19,8 +19,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="HLMainForm"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="128"/>
         <CursorPos Y="171"/>
         <UsageCount Value="208"/>
         <Loaded Value="True"/>
@@ -68,7 +68,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="HLNotepad"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <CursorPos Y="29"/>
         <UsageCount Value="38"/>

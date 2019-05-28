@@ -1,9 +1,10 @@
 object MainForm: TMainForm
   Left = 548
-  Height = 462
+  Height = 578
   Top = 225
-  Width = 800
+  Width = 1000
   Caption = 'HolyLand'
+  DesignTimePPI = 120
   Icon.Data = {
     3E9E0100000001000100B8B8000001001800289E01001600000028000000B800
     0000700100000100180000000000C08C01006400000064000000000000000000
@@ -3323,11 +3324,10 @@ object MainForm: TMainForm
   }
   Menu = MainMenu
   OnCreate = FormCreate
-  SessionProperties = 'Height;Left;Top;Width;WindowState;DesignTimePPI'
-  LCLVersion = '2.0.2.0'
+  SessionProperties = 'Height;Left;Top;Width;WindowState'
   object MainMenu: TMainMenu
-    left = 19
-    top = 13
+    left = 24
+    top = 16
     object MenuItemFile: TMenuItem
       Caption = 'File'
       object MenuItemExit: TMenuItem
@@ -3399,7 +3399,7 @@ object MainForm: TMainForm
   object SessionIniPropStorage: TIniPropStorage
     StoredValues = <>
     IniFileName = 'HolyLand.ini'
-    left = 48
-    top = 13
+    left = 60
+    top = 16
   end
 end
